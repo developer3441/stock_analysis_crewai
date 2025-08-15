@@ -17,14 +17,38 @@ By [@joaomdmoura](https://x.com/joaomdmoura)
 CrewAI is designed to facilitate the collaboration of role-playing AI agents. In this example, these agents work together to give a complete stock analysis and investment recommendation
 
 ## Running the Script
+
 It uses GPT-4 by default so you should have access to that to run it.
 
 ***Disclaimer:** This will use gpt-4 unless you changed it 
 not to, and by doing so it will cost you money.*
 
-- **Configure Environment**: Copy ``.env.example` and set up the environment variables for [Browseless](https://www.browserless.io/), [Serper](https://serper.dev/), [SEC-API](https://sec-api.io) and [OpenAI](https://platform.openai.com/api-keys)
-- **Install Dependencies**: Run `poetry install --no-root`.
-- **Execute the Script**: Run `poetry run python3 main.py`. (Note: execute from the directory containing main.pyy)
+### Installation
+
+First, install Poetry on your Linux server:
+
+```bash
+# Download and run the official installer
+curl -sSL https://install.python-poetry.org | python3 -
+
+# Add Poetry to your PATH (add this to your ~/.bashrc or ~/.zshrc)
+export PATH="$HOME/.local/bin:$PATH"
+
+# Reload your shell or run:
+source ~/.bashrc
+```
+
+### Setup and Execution
+
+- **Configure Environment**: Copy `.env.example` and set up the environment variables for [Browserless](https://www.browserless.io/), [Serper](https://serper.dev/), [SEC-API](https://sec-api.io) and [OpenAI](https://platform.openai.com/api-keys)
+
+- **Install Dependencies**: Run `poetry install --no-root`
+
+- **Navigate to Source**: `cd src/stock_analysis`
+
+- **Execute the Script**: Run `poetry run python3 main.py`
+
+Note: Make sure to execute from the directory containing main.py
 
 ## Details & Explanation
 - **Running the Script**: Execute `python main.py`` and input the company to be analyzed when prompted. The script will leverage the CrewAI framework to analyze the company and generate a detailed report.
